@@ -1,0 +1,409 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a8a8a8;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    --text-color: #343a40;
+}
+
+/* Layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info ul {
+    flex: 1;
+}
+
+.product-info .btn {
+    margin-top: 1rem;
+}
+
+/* Footer en la página de inicio */
+body:not(.body-index) footer {
+    margin-top: 4rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 2rem 0;
+    }
+    
+    .service-card {
+        margin-bottom: 2rem;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+    
+    .contact-methods {
+        margin-top: 2rem;
+    }
+    
+    .contact-methods .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .social-icons a {
+        margin: 0 0.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+body {
+    font-family: 'Gill Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/image1.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--light-bg);
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-card h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: white;
+}
+
+.contact-form .form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+}
+
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-info {
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+}
+
+/* Product Detail Images */
+.product-detail-section .col-md-6 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 2rem;
+}
+
+.product-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.product-info ul {
+    margin-bottom: 20px;
+}
+
+.product-info li {
+    margin-bottom: 10px;
+}
+
+.product-info .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.product-info .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    .about-section .row {
+        flex-direction: column;
+    }
+    
+    .about-section .col-md-6 {
+        margin-bottom: 30px;
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5942c4;
+    border-color: #5942c4;
+    transform: translateY(-2px);
+}
+
+/* Typography */
+.display-4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.li-linfatico {
+  list-style-type: none;
+  margin: 20px 0;
+  padding-left: 20px;
+  font-size: 2.5rem;
+}
+.li-linfatico ::before {
+  padding-right: 10px;
+}
+
+.imagen-linfatico {
+  width: 40rem;
+}
+
+.body-cosmiatria {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+.titulo-cosmiatria {
+  text-align: center;
+}
+
+.h2-cosmiatria {
+  text-align: left;
+}
+
+.ul-cosmiatria {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 200%;
+}
+
+.li-cosmiatria {
+  margin: 20px 0;
+}
+
+/*
+body {
+    background-color: #C8A2C8;
+    display: flex 300;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+*/
+
+/*# sourceMappingURL=main.css.map */
